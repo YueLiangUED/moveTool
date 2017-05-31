@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- 添加到主屏幕后，全屏显示 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />  
+    <!-- 删除默认的苹果工具栏和菜单栏 -->
+    <meta name="apple-mobile-web-status-bar-style" content="block" />
+    <!-- 苹果手机顶部为黑色 -->
+    <meta name="fromat-detecition" content="telephone=no" /> 
+    <!-- 屏蔽浏览器自动识别数字为电话号码 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- 宽度设置为设备实际宽度，初始化倍数为1，最小倍数为1，最大倍数为1，用户缩放为否 -->
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+    <title>消失的通讯工具</title>
+    <script type="text/javascript">
+        ;(function (doc, win, undefined) {
+            var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in win? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (clientWidth === undefined) return;
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            };
+            if (doc.addEventListener === undefined) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false)
+        })(document, window);
+        setTimeout(showPage, 1);
+        function showPage() {
+            document.getElementsByTagName('body')[0].style.visibility = 'visible';
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <div class="layout">
+        <div class="swiper-container">
+            <div class="swiper-slide isFollow" data-swiper="false">
+                <p class="home_text">长按下方二维码<br />关注"中国电信北京客服"<br />回复“答题”即可参与</p>
+                <p class="home_img"><img src="images/ewm.png" alt="" /></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

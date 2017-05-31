@@ -1,0 +1,203 @@
+/* 
+* @Author: Marte
+* @Date:   2017-05-09 04:15:02
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-05-10 12:43:36
+*/
+html, body, .layout, .swiper-container, .swiper-wrapper, .swiper-slide {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.layout, .swiper-container, .swiper-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.layout {
+    overflow: hidden;
+}
+.swiper-slide {
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+}
+.swiper-slide>p {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+.swiper-btns {
+    bottom: 2.6rem;
+}
+.swipe-btn {
+    display: inline-block;
+    width: 1.64rem;
+    height: 0.63rem;
+    line-height: 0.63rem;
+    margin: 0 0.17rem;
+    background: url("../images/swiper-btn.png") no-repeat center;
+    background-size: 100%;
+    font-size: 0.28rem;
+    color: #470704;
+}
+.swipe-btn img {
+    width: 100%;
+    height: 100%;
+}
+/*关注页面*/
+.isFollow {
+    background: url("../images/bg_img/bg_img0.jpg") no-repeat center;
+    background-size: 100% 100%;
+}
+.home_text {
+    font-weight: 900;
+    top: 2.96rem;
+    font-size: 0.4rem;
+    color: #480705;
+}
+.home_img {
+    bottom: 3.45rem;
+}
+.home_img img {
+    width: 3.22rem;
+}
+
+/*//第一屏*/
+.turn{
+    bottom: 2.21rem;
+}
+.turn img {
+    height: 0.28rem;
+    animation:turn 1.8s infinite;
+    -webkit-animation:turn 1.8s infinite;
+}
+.turn2 {
+    bottom: 1.5rem;
+}
+.turn2 img {
+    height: 0.28rem;
+    animation:turn 1.8s infinite;
+    -webkit-animation:turn 1.8s infinite;
+}
+.help {
+    bottom: 1.52rem;
+}
+.help img {
+    height: 0.24rem;
+}
+.w_r {
+    top: 1.86rem;
+    height: 0.9rem;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    opacity: 0;
+    transform: scale(4);
+    -webkit-transform: scale(4);
+    background: url("../images/right.png") no-repeat center top;
+    background-size: auto 100%;
+}
+.w_r.anm {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+.w_r.wrong {
+    background-image: url("../images/wrong.png");
+}
+.input-num {
+    bottom: 3.38rem;
+}
+.input-num input {
+    width: 4.7rem;
+    height: 1.09rem;
+    border: 0.03rem solid #000000;
+    border-radius: 5px;
+    line-height: 1.09rem;
+    font-size: 0.4rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.input-btn {
+    bottom: 1.82rem;
+}
+.input-btn img {
+    width: 4.7rem;
+}
+/*结果页*/
+.result-text {
+    top: 5.94rem;
+    font-size: 0.32rem;
+    color: #460604;
+}
+.result-btn img {
+    width: 4.70rem;
+    height: 1.08rem;
+    margin-top: 0.42rem;
+}
+.AllRight {
+    bottom: 1.82rem;
+    display: none;
+}
+.noAllRight {
+    bottom: 2.53rem;
+}
+/*遮罩层样式*/
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+.modal-help, .modal-get {
+    position: absolute;
+    top: -46.8rem;
+    left: 0;
+    width: 100%;
+    height: 9.35rem;
+    display: block;
+    transition: top 0.5s linear;
+    -webkit-transition: top 0.5s linear;
+    z-index: 1050;
+}
+.modal-help img {
+    width: 100%;
+}
+.modal-get {
+    background: url("../images/get.png") no-repeat center;
+    background-size: 100%;
+}
+.modal-get p {
+    line-height: 1.5em;
+    font-size: 0.26rem;
+    color: #470704;
+}
+.modal-get p.get-txt {
+    margin-top: 5.10rem;
+}
+.modal-get p.tian-url {
+    font-size: 0.21rem;
+    margin-top: 0.45rem;
+}
+.girl {
+    position: absolute;
+    width: 100%;
+    height: 2.6rem;
+    background: url('../images/shar-img.png') no-repeat left top;
+    background-size: 100%;
+    z-index: 1050;
+    display: none;
+}
+@keyframes turn{
+    0%  {transform:translateX(0);}
+    50% {transform:translateX(-10px);}
+    100%{transform:translateX(0);}
+}
+@-webkit-keyframes turn{
+    0%  {-webkit-transform:translateX(0);}
+    50% {-webkit-transform:translate(-10px);}
+    100%{-webkit-transform:translateX(0);}
+}
